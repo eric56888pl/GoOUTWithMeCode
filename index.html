@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">
+          Do you wanna go on a date with me? (say yes pleaseee)
+        </h1>
+        <h1 class="header_text">Are you free in the weekend ?</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHNkNngzeDRmaGk4dXdyYWtkNW9nY2NkM29tZTkzdXF5bnhicThhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hM5kW7OU6d7AOUUjv/giphy.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">
+          Oczywiście
+        </button>
+        <!-- <button class="btn" id="noButton" onmouseover="moveButton()" -->
+        <!-- onclick="moveButton()" -->
+        <button class="btn" id="noButton" onmouseover="changeToYes()">
+          No
+        </button>
+        <script>
+          function nextPage() {
+            window.location.href = "yes.html";
+          }
+          function changeToYes() {
+            var button = document.getElementById("noButton");
+            if (button.textContent === "No") {
+              button.textContent = "Yes";
+            } else {
+              button.textContent = "TAK";
+            }
+          }
+
+          //   function moveButton() {
+          // var x =
+          //   Math.random() *
+          // (window.innerWidth -
+          //   document.getElementById("noButton").offsetWidth) -
+          //   85;
+          // var y =
+          //   Math.random() *
+          // (window.innerHeight -
+          //   document.getElementById("noButton").offsetHeight) -
+          //   48;
+          // document.getElementById("noButton").style.left = `${x}px`;
+          // document.getElementById("noButton").style.top = `${y}px`;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
